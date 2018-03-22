@@ -1,8 +1,9 @@
+<div class ="body-main">
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" [routerLink]="['']">AATS</a>
+            <a class="navbar-brand" [routerLink]="['']"><strong>AATS</strong></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -13,7 +14,8 @@
                         [routerLink]="['all-in-one']" *ngIf="!(isLoggedIn|async)">All In One</a></li> -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a (click)="openDialog()">New Ticket</a></li>
+                <li  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a  (click)="openDialog()">
+                    New Ticket</a></li>
                 <li *ngIf="(isLoggedIn|async)" class="navbar-text">{{(currentUser()|async).email}}</li>
                 <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!(isLoggedIn|async)"><a
                         [routerLink]="['login']">Login</a></li>
@@ -23,7 +25,12 @@
     </div><!-- /.container-fluid -->
 </nav>
 
-
-<div class="">
+<div class="b" >
+<div class="cont">
     <router-outlet></router-outlet>
+</div>
+<div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>
 </div>

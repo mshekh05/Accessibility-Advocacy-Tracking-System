@@ -11,7 +11,7 @@ import {AlertModule} from "ngx-bootstrap";
 import {Routes, RouterModule} from "@angular/router";
 import { LoggedInGuard } from "app/shared/logged-in-guard";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatInputModule,MatSelectModule ,MatFormFieldModule,MatDialogModule,  MatCardModule,    MatButtonModule,        MatTooltipModule,    MatSnackBarModule} from '@angular/material';
+import {MatExpansionModule,MatInputModule,MatSelectModule ,MatFormFieldModule,MatDialogModule,  MatCardModule,    MatButtonModule,        MatTooltipModule,    MatSnackBarModule} from '@angular/material';
 // Components
 import {AppComponent} from "./app.component";
 import { DashboardPageComponent } from './pages/dashboard-page.component';
@@ -26,6 +26,7 @@ import {RegisterUserComponent} from "app/register-user/register-user.component";
 import {ResetPasswordComponent} from "./reset-password/reset-password.component";
 import { TicketFormComponent } from './ticket-form/ticket-form.component';
 import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -36,6 +37,8 @@ const routes: Routes = [
     { path: 'reset-password', component: ResetPasswordComponent },
     { path: 'login', component: LoginPageComponent },
     { path: 'ticket-form', component: TicketFormComponent },
+    { path: 'footer', component: FooterComponent },
+
     { path: 'dashboard', component: DashboardPageComponent, canActivate: [LoggedInGuard] },
     { path: '', component: HomescreenComponent }
 ];
@@ -54,7 +57,8 @@ const routes: Routes = [
         DashboardPageComponent,
         HomescreenComponent,
         TicketFormComponent,
-        TicketDialogComponent
+        TicketDialogComponent,
+        FooterComponent
     ],
     imports: [
         BrowserModule,
@@ -74,6 +78,8 @@ const routes: Routes = [
         MatFormFieldModule,
         MatSelectModule  ,
         MatInputModule,
+        MatExpansionModule,
+        
         RouterModule.forRoot(routes),
         
     ],

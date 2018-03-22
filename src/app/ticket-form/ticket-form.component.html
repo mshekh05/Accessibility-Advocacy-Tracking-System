@@ -2,28 +2,84 @@
   <h2 mat-dialog-title>Create New Ticket</h2>
   <hr>
   <mat-dialog-content >
-    <div class ="form-component">
+    <div class ="form-component" *ngIf = "data == 'new'" >
     <mat-form-field>
-      <input matInput placeholder="Name" required>
+      <input matInput placeholder="Name" [(ngModel)]="ticket.name" required>
     </mat-form-field>
   
     <mat-form-field>
-        <input matInput placeholder="Email" [formControl]="email" required>
+        <input matInput placeholder="Email" [(ngModel)]="ticket.emailid" [formControl]="email" required>
+        <mat-error *ngIf="!getErrorMessage()">
+            Please enter a valid email address
+          </mat-error>
+         
       </mat-form-field>
       <mat-form-field>
-          <input matInput placeholder="Subject">
+          <input matInput [(ngModel)]="ticket.subject" placeholder="Subject">
         </mat-form-field>
     <mat-form-field>
-      <textarea matInput matTextareaAutosize minRows="3" placeholder="Description"></textarea>
+      <textarea matInput matTextareaAutosize minRows="3" [(ngModel)]="ticket.desc" placeholder="Description"></textarea>
+      
     </mat-form-field>
+
+    <strong>{{data}}</strong>
   
     
     
     </div>
+    <div class ="form-component" *ngIf = "data != 'new'" >
+        <mat-form-field>
+          <input matInput placeholder="{{data}}" [(ngModel)]="ticket.name"  [readonly]="true">
+        </mat-form-field>
+      
+        <mat-form-field>
+            <input matInput placeholder="xyz@gmail.com" [(ngModel)]="ticket.emailid" [formControl]="email"  [readonly]="true">
+            
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput [(ngModel)]="ticket.subject" placeholder="Amazon is not easy"   [readonly]="true">
+            </mat-form-field>
+        <mat-form-field>
+          <textarea matInput matTextareaAutosize minRows="3" [(ngModel)]="ticket.desc" placeholder="Not working Not working"   [readonly]="true"></textarea>
+          
+        </mat-form-field>
+        <div style= "display:flex; flex-flow:column;max-width: 10vw; min-height:10vh">
+        <mat-select placeholder="Category">
+            <mat-option *ngFor="let cat of cats" [value]="cat.value">
+              {{ cat.viewValue }}
+            </mat-option>
+          </mat-select>
+          <mat-select placeholder="Status">
+              <mat-option *ngFor="let stat of status" [value]="stat.value">
+                {{ stat.viewValue }}
+              </mat-option>
+            </mat-select>
+            <mat-select placeholder="Seviarity">
+                <mat-option *ngFor="let sev of seviarities" [value]="sev.value">
+                  {{ sev.viewValue }}
+                </mat-option>
+              </mat-select>
+            </div>
+
+
+
+
+
+
+
+
+
+
+    
+        <strong>{{data}}</strong>
+      
+        
+        
+        </div>
   </mat-dialog-content>
   <hr>
   <mat-dialog-actions>
-    <button mat-raised-button (click)="onCloseConfirm()">CONFIRM</button>
+    <button mat-raised-button [disabled]="ticket.name == null|| ticket.subject == null || email.hasError('email') || ticket.emailid == null  "  (click)="onCloseConfirm()">CONFIRM</button>
     <button mat-raised-button (click)="onCloseCancel()">CANCEL</button>
   </mat-dialog-actions>
 </div>

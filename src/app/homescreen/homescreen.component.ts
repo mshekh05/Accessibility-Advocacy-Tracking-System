@@ -11,6 +11,7 @@ import { UserInfo } from "app/shared/user-info";
   styleUrls: ['./homescreen.component.css']
 })
 export class HomescreenComponent {
+    panelOpenState: boolean = false;
 
   userInfo: Observable<UserInfo>;
     isLoggedIn = new BehaviorSubject(false);

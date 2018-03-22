@@ -1,0 +1,22 @@
+.container-fluid{
+    background: #1d2d3c;
+    color:white !important;
+}
+.navbar-brand{
+    color:white;
+}
+
+.navbar-default .navbar-nav>li>a{
+    color:#CECFD2 ;
+    cursor:pointer;
+
+}
+
+.cont{
+    /* background: #E9E9E9; */
+}
+.body-main{
+    background:#DCE7EB;
+    
+
+}

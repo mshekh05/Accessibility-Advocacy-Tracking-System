@@ -67,7 +67,7 @@ export class AppComponent {
         let dialogRef = this.dialog.open(TicketFormComponent, {
             width: '600px',
             // height:'1000px',
-            data: 'This text is passed into the dialog'
+            data: 'new'
           });
       
           dialogRef.afterClosed().subscribe(result => {
