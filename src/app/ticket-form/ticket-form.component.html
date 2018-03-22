@@ -1,3 +1,29 @@
-<p>
-  ticket-form works!
-</p>
+<div>
+  <h2 mat-dialog-title>Create New Ticket</h2>
+  <hr>
+  <mat-dialog-content >
+    <div class ="form-component">
+    <mat-form-field>
+      <input matInput placeholder="Name" required>
+    </mat-form-field>
+  
+    <mat-form-field>
+        <input matInput placeholder="Email" [formControl]="email" required>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Subject">
+        </mat-form-field>
+    <mat-form-field>
+      <textarea matInput matTextareaAutosize minRows="3" placeholder="Description"></textarea>
+    </mat-form-field>
+  
+    
+    
+    </div>
+  </mat-dialog-content>
+  <hr>
+  <mat-dialog-actions>
+    <button mat-raised-button (click)="onCloseConfirm()">CONFIRM</button>
+    <button mat-raised-button (click)="onCloseCancel()">CANCEL</button>
+  </mat-dialog-actions>
+</div>

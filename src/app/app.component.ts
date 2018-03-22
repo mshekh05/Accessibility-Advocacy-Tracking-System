@@ -1,9 +1,12 @@
-import {Component} from "@angular/core";
+import {Component,Inject} from "@angular/core";
 import {AuthService} from "app/shared/auth.service";
 import { Observable } from "rxjs/Observable";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import {Router} from "@angular/router";
 import {UserInfo} from "app/shared/user-info";
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { TicketFormComponent } from './ticket-form/ticket-form.component';
+
 
 @Component({
     selector: 'app-root',
@@ -11,11 +14,13 @@ import {UserInfo} from "app/shared/user-info";
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+    dialogResult: string;
+    
     private alertType = null;
     private alertMessage = "";
     isLoggedIn = new BehaviorSubject<boolean>(false);
 
-    constructor(private authService: AuthService, private router: Router) {
+    constructor(private authService: AuthService, private router: Router,public dialog: MatDialog) {
         this.authService.isLoggedIn().subscribe(this.isLoggedIn);
     }
 
@@ -58,4 +63,16 @@ export class AppComponent {
         this.alertType = null;
         this.alertMessage = "";
     }
+    openDialog(): void {
+        let dialogRef = this.dialog.open(TicketFormComponent, {
+            width: '600px',
+            // height:'1000px',
+            data: 'This text is passed into the dialog'
+          });
+      
+          dialogRef.afterClosed().subscribe(result => {
+            console.log(`Dialog closed: ${result}`);
+            this.dialogResult = result;
+          })
+      }
 }

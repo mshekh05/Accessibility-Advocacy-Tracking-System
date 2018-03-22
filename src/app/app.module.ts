@@ -11,7 +11,7 @@ import {AlertModule} from "ngx-bootstrap";
 import {Routes, RouterModule} from "@angular/router";
 import { LoggedInGuard } from "app/shared/logged-in-guard";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-
+import {MatInputModule,MatSelectModule ,MatFormFieldModule,MatDialogModule,  MatCardModule,    MatButtonModule,        MatTooltipModule,    MatSnackBarModule} from '@angular/material';
 // Components
 import {AppComponent} from "./app.component";
 import { DashboardPageComponent } from './pages/dashboard-page.component';
@@ -25,6 +25,7 @@ import {DisplayUserComponent} from "app/display-user/display-user.component";
 import {RegisterUserComponent} from "app/register-user/register-user.component";
 import {ResetPasswordComponent} from "./reset-password/reset-password.component";
 import { TicketFormComponent } from './ticket-form/ticket-form.component';
+import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 
 
 
@@ -52,7 +53,8 @@ const routes: Routes = [
         LoginPageComponent,
         DashboardPageComponent,
         HomescreenComponent,
-        TicketFormComponent
+        TicketFormComponent,
+        TicketDialogComponent
     ],
     imports: [
         BrowserModule,
@@ -64,9 +66,18 @@ const routes: Routes = [
         AngularFireDatabaseModule,
         AngularFireAuthModule,
         BrowserAnimationsModule,
-        RouterModule.forRoot(routes)
+        MatCardModule,
+        MatButtonModule,
+        MatDialogModule,
+        MatTooltipModule,
+        MatSnackBarModule,
+        MatFormFieldModule,
+        MatSelectModule  ,
+        MatInputModule,
+        RouterModule.forRoot(routes),
+        
     ],
-    providers: [AuthService, LoggedInGuard],
+    providers: [ AuthService, LoggedInGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule {

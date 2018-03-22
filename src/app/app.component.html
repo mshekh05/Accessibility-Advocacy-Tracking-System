@@ -13,7 +13,7 @@
                         [routerLink]="['all-in-one']" *ngIf="!(isLoggedIn|async)">All In One</a></li> -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['ticket-form']">New Ticket</a></li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a (click)="openDialog()">New Ticket</a></li>
                 <li *ngIf="(isLoggedIn|async)" class="navbar-text">{{(currentUser()|async).email}}</li>
                 <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!(isLoggedIn|async)"><a
                         [routerLink]="['login']">Login</a></li>
