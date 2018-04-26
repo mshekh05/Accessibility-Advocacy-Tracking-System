@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "acc-advocacy-tracking",
+    "staging": "acc-advocacy-tracking"
+  }
+}
