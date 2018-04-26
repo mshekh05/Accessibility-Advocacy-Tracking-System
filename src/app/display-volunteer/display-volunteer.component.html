@@ -1,0 +1,186 @@
+<div style="min-height:80vh" class="row">
+    <div class="col-md-3 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading">Volunteer Information</div>
+            <ul class="list-group" *ngIf="currentUser() | async as user">
+                <li class="list-group-item">Email: {{user.email}}</li>
+                <li class="list-group-item">Display Name: {{user.displayName}}</li>
+                <li class="list-group-item">User: Volunteer</li>
+                <li class="list-group-item" *ngIf="user.photoURL"><img style = "max-width: 200px !important;"
+                                                                       [src]="user.photoURL"/></li>
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="col-md-6 col-md-offset-1">
+        <div class="panel panel-default">
+            <div class="panel-heading">Ticket Dashboard</div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">Ticket No. 10024</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Create better Accessability in ordering from amazon
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    There are issues with placing orders on Amazon.com for the users who have a vision deficiency. I believe there should be a better arrangement for such users so that it eases out the process of placing orders on the giant e-commerce site and enhances the user experience.
+                    <mat-action-row>
+                        <button mat-button color="primary" (click)="openDialog(10024)" >Open</button>
+                    </mat-action-row>
+
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">Ticket No. 6685</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Facebook should have features that assists people with physical disabilities
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    Facebook should provide features like a virtual keyboard to provide users with certain physical disabilities to use and access the website easily. Such implemented features will provide means to access the website for every individual. Right now, I feel people with complete abilities can access facebook.
+                    <mat-action-row>
+                        <button mat-button color="primary" (click)="openDialog('new')" >Open</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">Ticket No. 55533</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Youtube should provide a more subtle version of captioning and text files for transcripts
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    For people in the deaf community or for those hard of hearing, captioning and transcripts can provide synchronized text when viewing a video or a transcript text file that can be read separately. Many videos on YouTube do not provide captions and there are no audio text files provided for any of the videos. It would be much better for people belonging to deaf community to use YouTube if these things are provided.
+
+                    <mat-action-row>
+                        <button mat-button color="primary" >Open</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">Ticket No. 1234</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Videos on facebook can cause excessive distraction.
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    Some people with cognitive disabilities find animations or other on- screen movement to be excessively distracting. This being the case, all site animations should include an option to disable or pause them. Videos on facebook start playing automatically. Maybe an option should be provided to the individual users to enable or disable that option.
+
+                    <mat-action-row>
+                        <button mat-button color="primary" >Open</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">Ticket No. 9911</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Deceptive Navigation in Stack Overflow
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    While people without impairment can scan pages to find links to useful information from within the context of the text surrounding those links, people relying on assistive devices such as screen readers often access hyperlinks as part of a list that has no additional context. For this reason, sites shouldn’t name links using terms such as “read more.” That gives no context for people who access links from a list.
+
+                    <mat-action-row>
+                        <button mat-button color="primary" >Open</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">Ticket No. 45645</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            More emphasis on text in images on Google.
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    Adding text descriptions to images allows vision-impaired users to understand what is being displayed. This can be important for graphics such as flowcharts, schematics, maps, graphs, or menu buttons. A lack of additional text to support images was one of the key factors cited in the landmark accessibility class action lawsuit that was successfully brought against the retailer Target.
+
+                    <mat-action-row>
+                        <button mat-button color="primary" >Open</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">Ticket No. 13355</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Confusing fields on Google Forms
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    Instructions related to form fields are typically locked to prevent editing of non-field content. Unfortunately, that makes the instructions related to those form fields unreadable to a screen reader. All form fields, checkboxes, or dropdown menus should be clearly labeled and capable of being read by screen readers.
+
+                    <mat-action-row>
+                        <button mat-button color="primary" >Open</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">Ticket No. 12344</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            LinkedIn login system.
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    Many online forms incorporate a time-out feature for security purposes. Unfortunately, this can leave users navigating by keyboard or those using screen readers insufficient time to complete the form — even if they complete it in one continuous session. Form pages should be designed to allow the user to extend the time to complete a form when necessary.
+
+                    <mat-action-row>
+                        <button mat-button color="primary" >Open</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">Ticket No. 456</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Create better Accessability in ordering from YouTube.
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    Lorem ipsum dolor sit amet, mei ex erant bonorum insolens, atqui nonumes intellegebat mel ea. Ne eos quando corrumpit, ad sed facer quaestio eloquentiam, maiorum mentitum partiendo eu est. Eirmod qualisque quo cu. Sea fuisset deleniti in, ut sapientem deterruisset est.
+
+                    <mat-action-row>
+                        <button mat-button color="primary" >Open</button>
+                    </mat-action-row>
+                </mat-expansion-panel>
+
+
+
+
+
+
+                <!-- <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Self aware panel
+                    </mat-panel-title>
+                    <mat-panel-description>
+                      Currently I am {{panelOpenState ? 'open' : 'closed'}}
+                    </mat-panel-description>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel> -->
+            </mat-accordion>
+
+        </div>
+
+    </div>
+</div>

@@ -27,6 +27,8 @@ import {ResetPasswordComponent} from "./reset-password/reset-password.component"
 import { TicketFormComponent } from './ticket-form/ticket-form.component';
 import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 import { FooterComponent } from './footer/footer.component';
+import { DisplayVolunteerComponent } from './display-volunteer/display-volunteer.component';
+import { TicketFormVolunteerComponent } from './ticket-form-volunteer/ticket-form-volunteer.component';
 
 
 
@@ -59,7 +61,9 @@ const routes: Routes = [
         HomescreenComponent,
         TicketFormComponent,
         TicketDialogComponent,
-        FooterComponent
+        FooterComponent,
+        DisplayVolunteerComponent,
+        TicketFormVolunteerComponent
     ],
     imports: [
         BrowserModule,
