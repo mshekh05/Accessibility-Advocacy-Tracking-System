@@ -38,6 +38,7 @@ const routes: Routes = [
     { path: 'login', component: LoginPageComponent },
     { path: 'ticket-form', component: TicketFormComponent },
     { path: 'footer', component: FooterComponent },
+    { path: 'display-user', component: DisplayUserComponent },
 
     { path: 'dashboard', component: DashboardPageComponent, canActivate: [LoggedInGuard] },
     { path: '', component: HomescreenComponent }

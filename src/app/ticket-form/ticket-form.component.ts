@@ -18,6 +18,7 @@ import {Ticket} from "../ticket";
 export class TicketFormComponent implements OnInit {
   
   ticket:Ticket;
+  action:string;
   email = new FormControl('', [Validators.required, Validators.email]);
   cats = [
     {value: 'phy-1', viewValue: 'Physical'},
@@ -61,7 +62,9 @@ export class TicketFormComponent implements OnInit {
   }
 
   onCloseConfirm() {
-    this.snackBar.open("New Ticket created. Thanks for improving the community :)");
+    
+    this.action= "Done"
+    this.snackBar.open("New Ticket created. Thanks for improving the community :)",this.action, { duration: 2000 });
     
     this.thisDialogRef.close(this.ticket);
   }
