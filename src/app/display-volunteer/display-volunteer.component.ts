@@ -7,7 +7,7 @@ import { BehaviorSubject } from "rxjs/BehaviorSubject";
 import {Router} from "@angular/router";
 import {UserInfo} from "app/shared/user-info";
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
-import { TicketFormComponent } from '../ticket-form/ticket-form.component';
+import { TicketFormVolunteerComponent } from '../ticket-form-volunteer/ticket-form-volunteer.component';
 
 @Component({
   selector: 'app-display-volunteer',
@@ -30,7 +30,7 @@ export class DisplayVolunteerComponent {
         this.authService.logout().subscribe(() => this.onLoggedOut.emit("success"));
     }
     openDialog(ticket:any): void {
-        let dialogRef = this.dialog.open(TicketFormComponent, {
+        let dialogRef = this.dialog.open(TicketFormVolunteerComponent, {
             width: '600px',
             // height:'1000px',
             data: ticket

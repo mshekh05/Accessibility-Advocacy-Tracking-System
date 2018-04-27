@@ -29,7 +29,7 @@ import { TicketDialogComponent } from './ticket-dialog/ticket-dialog.component';
 import { FooterComponent } from './footer/footer.component';
 import { DisplayVolunteerComponent } from './display-volunteer/display-volunteer.component';
 import { TicketFormVolunteerComponent } from './ticket-form-volunteer/ticket-form-volunteer.component';
-
+import { ViewUsersComponent } from './view-users/view-users.component';
 
 
 
@@ -41,7 +41,9 @@ const routes: Routes = [
     { path: 'ticket-form', component: TicketFormComponent },
     { path: 'footer', component: FooterComponent },
     { path: 'display-user', component: DisplayUserComponent },
-
+    { path: 'display-volunteer', component: DisplayVolunteerComponent },
+    { path: 'ticket-form-volunteer', component: TicketFormVolunteerComponent },
+    { path: 'view-users', component: ViewUsersComponent },
     { path: 'dashboard', component: DashboardPageComponent, canActivate: [LoggedInGuard] },
     { path: '', component: HomescreenComponent }
 ];
@@ -63,7 +65,8 @@ const routes: Routes = [
         TicketDialogComponent,
         FooterComponent,
         DisplayVolunteerComponent,
-        TicketFormVolunteerComponent
+        TicketFormVolunteerComponent,
+        ViewUsersComponent
     ],
     imports: [
         BrowserModule,
@@ -84,9 +87,9 @@ const routes: Routes = [
         MatSelectModule  ,
         MatInputModule,
         MatExpansionModule,
-        
+
         RouterModule.forRoot(routes),
-        
+
     ],
     providers: [ AuthService, LoggedInGuard],
     bootstrap: [AppComponent]

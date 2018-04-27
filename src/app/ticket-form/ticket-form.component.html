@@ -45,16 +45,16 @@
         </mat-form-field>
         <div style= "display:flex; flex-flow:column;max-width: 10vw; min-height:10vh">
         <mat-select placeholder="Category">
-            <mat-option *ngFor="let cat of cats" [value]="cat.value">
+            <mat-option *ngFor="let cat of cats" [value]="cat.value" >
               {{ cat.viewValue }}
             </mat-option>
           </mat-select>
           <mat-select placeholder="Status">
-              <mat-option *ngFor="let stat of status" [value]="stat.value">
+              <mat-option *ngFor="let stat of status" [value]="stat.value" >
                 {{ stat.viewValue }}
               </mat-option>
             </mat-select>
-            <mat-select placeholder="Seviarity">
+            <mat-select placeholder="Severity">
                 <mat-option *ngFor="let sev of seviarities" [value]="sev.value">
                   {{ sev.viewValue }}
                 </mat-option>

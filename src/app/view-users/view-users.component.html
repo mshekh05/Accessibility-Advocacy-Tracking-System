@@ -1,0 +1,89 @@
+<div style="min-height:80vh" class="row">
+    <h1 style="text-align: center" mat-dialog-title>User Management</h1>
+    <br/>
+    <br/>
+    <div class="col-md-4 col-md-offset-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">Registered Users</div>
+            <mat-accordion>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">User #1</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Ayush Ruchandani
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                        <p><strong>Email id:</strong> ayush@ruchandani.com</p>
+                        <p><strong>Unsolved Tickets:</strong> 3</p>
+                    <mat-action-row>
+                        <a (click)="openDialog(1)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
+                    </mat-action-row>
+
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">User #2</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Mohamad Mudassar Shekh
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p><strong>Email id:</strong> mshekh@asu.edu</p>
+                    <p><strong>Unsolved Tickets:</strong> 1</p>
+                    <mat-action-row>
+                        <a (click)="openDialog(2)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
+                    </mat-action-row>
+
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">User #3</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Santosh Bidve
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p><strong>Email id:</strong> sbidve@asu.edu</p>
+                    <p><strong>Unsolved Tickets:</strong> 2</p>
+                    <mat-action-row>
+                        <a (click)="openDialog(3)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
+                    </mat-action-row>
+
+                </mat-expansion-panel>
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <a href="#">User #4</a>
+
+                        </mat-panel-title>
+                        <mat-panel-description>
+                            Kushal Adhvaryu
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p><strong>Email id:</strong> kadhvary@asu.edu</p>
+                    <p><strong>Unsolved Tickets:</strong> 3</p>
+                    <mat-action-row>
+                        <a (click)="openDialog(4)" class="trash"><span class="fa fa-trash fa-2x"></span></a>
+                    </mat-action-row>
+
+                </mat-expansion-panel>
+            </mat-accordion>
+        </div>
+    </div>
+    <!--<ul class="list-group user-list">-->
+        <!--<li class="list-group-item">-->
+            <!--<div class="user-info">-->
+                <!--<strong>Ayush Ruchandani</strong><br>-->
+                <!--<span class="text-muted">ayush@ruchandani.com</span>-->
+            <!--</div>-->
+            <!--<a class="trash"><span class="fa fa-trash fa-2x"></span></a>-->
+        <!--</li>-->
+    <!--</ul>-->
+</div>

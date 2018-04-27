@@ -9,12 +9,14 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['display-user']" *ngIf="(isLoggedIn|async)">Dashboard</a></li>
+                <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['display-volunteer']" *ngIf="(isLoggedIn|async)">Dashboard</a></li>
                 <!-- <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a
                         [routerLink]="['all-in-one']" *ngIf="!(isLoggedIn|async)">All In One</a></li> -->
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a  (click)="openDialog()">
+                <li  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a *ngIf="(true)" [routerLink]="['view-users']">
+                    View Users</a></li>
+                <li  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a *ngIf="(false)" (click)="openDialog()">
                     New Ticket</a></li>
                 <li *ngIf="(isLoggedIn|async)" class="navbar-text">{{(currentUser()|async).email}}</li>
                 <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!(isLoggedIn|async)"><a
